@@ -1,0 +1,513 @@
+@font-face
+{
+	font-family: Geomanist;
+	src: url(../fonts/Geomanist-Regular.otf);
+}
+html
+{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+}
+body 
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+*,*:after,*:before
+{
+	box-sizing: inherit;
+	font-family: sans-serif;
+}
+.main 
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-color: #D9DBD4;
+}
+.header
+{
+	width: 100%;
+	height: 18%;
+	background-color: #009688;
+}
+.body_pane 
+{
+	position: absolute;
+	width: 89%;
+	height: 95%;
+	top: 2%;
+	left: 6%;
+	margin: 5px auto;
+	background-color: #E4DDD7;
+	z-index: 999;
+	border: 1px #DDDDDD solid;
+	box-shadow: 1px 1px 2px 2px #CCCCCC;
+	border-radius: 2px;
+}
+.left_pane
+{
+	position: relative;
+	width: 31.8%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-right: 1px #DDDDDD solid;
+}
+.self_info
+{
+	position: relative;
+	width: 100%;
+	height: 9%;
+	top: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	padding: 3%;
+	box-sizing: border-box;
+}
+.self_info .logout a 
+{
+	position: relative;
+	top: 30%;
+	float: right;
+	cursor: pointer;
+	margin-right: 2%;
+	font-family: sans-serif;
+	font-size: 0.9em;
+	text-decoration: underline;
+}
+.self_info .back
+{
+	float:right;
+	position: relative;
+	top: 30%;
+	margin-right: 5%;
+	font-size: 0.9em;
+} 
+.self_info img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 5%;
+	border: 1px solid #BBBBBB;
+}
+.self_info span.heading
+{
+	font-size: 1.2em;
+	position: relative;
+	top: 5%;
+	left: 3%;
+	font-weight: bold;
+	font-family: Geomanist;
+	color: #FF5544;
+}
+.self_info span img
+{
+	width: 35px;
+	height: 35px;
+	float: right;
+	border-radius: 50%;
+	margin-right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.display_image
+{
+	width: 100%;
+	height: 91%;
+	background-color: #D9CBCA;
+	overflow: hidden;
+}
+.display_image img
+{
+	position: relative;
+	top: 10%;
+}
+.menu_clicked
+{
+	position: absolute;
+	top: 9%;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	background-color: red;
+	z-index: 999;
+}
+.menu
+{
+	position: absolute;
+	top: 9%;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	background-color: transparent;
+	color: transparent;
+	z-index: -1000;
+}
+.right_pane
+{
+	position: relative;
+	width: 68.2%;
+	height: 100%;
+	top: -100%;
+	left: 31.8%;
+}
+.user_info
+{
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 9%;
+	top: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 1%;
+	font-family: sans-serif;
+}
+.user_info .info
+{
+	position: relative;
+	top: 20%;
+	left: 2%;
+	color: #666666;
+	/*font-weight: bold;*/
+	vertical-align: top;
+	font-size: 1.1em;
+}
+.user_info span img
+{
+	width: 35px;
+	height: 35px;
+	float: right;
+	border-radius: 50%;
+	margin-right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.user_info img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 2%;
+	border: 1px solid #BBBBBB;
+}
+.user_info .members
+{
+	display: block;
+	font-size: 0.8em; 
+	position: relative;
+	left: 6%;
+	top: -40%;
+}
+.user_info .options
+{
+	position: absolute;
+	top: 15%;
+	right: 2%;
+}
+a
+{
+	color: #000000;
+	font-size: 1em;
+}
+.form_container
+{
+	width: 100%;
+	height: 91%;
+	background-color: #E4DDD7;
+}
+.form
+{
+	position: relative;
+	top: 20%;
+	width: 70%;
+	margin: auto;
+    padding: 20px 12px 20px 25px;
+    font: 13px "Geomanist", sans-serif;
+}
+.form ul
+{
+	position: relative;
+	left: 10%;
+}
+.form li 
+{
+	padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form label
+{
+    margin:0 0 3px 0;
+    padding:0px;
+    /*display:block;*/
+    font-weight: bold;
+    color: #009688;
+    font-size: 1em;
+    line-height: 2em;
+}
+.form label[for=search]
+{
+	display: block;
+}
+.form input[type=text],
+.form input[type=password],
+.form input[type=file],
+.form select
+{
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+    border-radius: 5px;
+}
+.form input[type=text]:focus,
+.form input[type=password]:focus,
+.form input[type=file]:focus,
+.form select:focus
+{
+	-moz-box-shadow: 0 0 12px #888888;
+    -webkit-box-shadow: 0 0 12px #888888;
+    box-shadow: 0 0 12px #888888;
+    border: 1px solid #888888;
+}
+.form .field-long, 
+.form .field-select
+{
+	width: 70%;
+}
+.form .field-short
+{
+	width: 34.7%;
+}
+.form .field-medium
+{
+	width: 40%;
+}
+.form .fit
+{
+	width: 100%
+}
+.form input[type=submit]
+{
+	background: #009688;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+}
+.form input[type=submit]:hover
+{
+	background: #0096FF;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+#search_submit
+{
+	visibility: hidden;
+}
+#search_icon img
+{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 73%;
+	left: 9%;
+}
+#search
+{
+	padding-left: 8%;
+}
+.form.add_member
+{
+	position: relative;
+	top: 5%;
+	margin: auto;
+}
+.form a
+{
+	color: #FF5544;
+}
+.form_long h2
+{
+	position: absolute;
+	top: -10%;
+	left: 35%;
+}
+.right_pane .selected_members
+{
+	width: 60%;
+	height: 40%;
+	margin: auto;
+	position: relative;
+	/*top: 15%;*/
+	background-color: #E4DDD7;
+	overflow: auto;
+	padding: 0% 5% 0% 5%;
+	margin-bottom: 2%;
+}
+.selected_members .conversation
+{
+	width: 100%;
+	height: 20%;
+	border-radius: 7px;
+	background-color: #DDDDDD;
+	margin: auto;
+	margin-bottom: 2%;
+	padding: 1%;
+	border: 1px dotted #000000;
+	color: #444444;
+}
+.selected_members .conversation img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: #AAAAAA;
+}
+.selected_members span
+{
+	font-family: Geomanist,Lucida,sans-serif;
+	display: inline-block;
+	vertical-align: top;
+}
+.selected_members h2
+{
+	color: #009688;
+	text-align: center;
+	font-family: Geomanist,Lucida,sans-serif;
+}
+.active_chats
+{
+	width: 70%;
+	height: 15%;
+	margin: auto;
+	background-color: #E4DDD7;
+	overflow: auto;
+	/*padding: 0% 5% 0% 5%;*/
+	margin-top: 2%;
+	border: 1px dotted #CCCCCC;
+	overflow: auto;
+}
+.active_chats .conversation
+{
+	width: 100%;
+	height: 80%;
+	padding: 2%;
+	font-size: 0.9em;
+	font-family: sans-serif;
+}
+.active_chats .user_search
+{
+	font-size: 1em;
+	color: #888888;
+}
+.active_chats .conversation span
+{
+	vertical-align: top;
+	font-size: 0.8em;
+	font-family: sans-serif;
+	color: #3C3C3C;
+}
+.active_chats .conversation img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 5%;
+	border: 1px solid #BBBBBB;
+}
+.active_chats .conversation a
+{
+	font-weight: bold;
+	font-size: 0.9em;
+	vertical-align: top;
+}
+.conversation .add
+{
+	width: 10px;
+	height: 10px;
+	float: right;
+	position: relative;
+	top: -65%;
+}
+span.remove
+{
+	float: right;
+}
+span.remove img
+{
+	width: 10px;
+	height: 10px;
+} 
+::-webkit-scrollbar
+{
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-track {
+      background-color: #E4DDD7;
+}
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #CBCBCB; 
+}
+ 
+::-webkit-scrollbar-button {
+      width: 0%;
+      height: 0%;
+} 
+ 
+::-webkit-scrollbar-corner {
+      width: 0%;
+      height: 0%;
+}
+.message
+{
+	text-align: center;
+	font-family: Geomanist,Lucida,sans-serif;
+	position: relative;
+	top: 2%;
+	width: 100%;
+	padding-right: 5%
+}
+.message button
+{
+	float: right;
+	border-radius: 7px;
+	background-color: #009688;
+	color: #FFFFFF;
+	outline: none;
+	border: 0;
+	width: 20%;
+	cursor: pointer;
+}
+.form .errors
+{
+	color: #FF5544;
+}
+.form .errors
+{
+	position: relative;
+	left: 25%;
+}

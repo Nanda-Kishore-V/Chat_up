@@ -1,0 +1,773 @@
+@font-face 
+{
+    font-family: Geomanist;
+    src: url(../fonts/Geomanist-Regular.otf);
+}
+html
+{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	overflow: hidden;
+	font-size: 2.15vh;
+}
+body 
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+*,*:after,*:before
+{
+	box-sizing: inherit;
+}
+.main 
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-color: #D9DBD4;
+}
+.header
+{
+	width: 100%;
+	height: 18%;
+	background-color: #009688;
+}
+.body_pane 
+{
+	position: absolute;
+	width: 89%;
+	height: 95%;
+	top: 2%;
+	left: 6%;
+	margin: 5px auto;
+	background-color: #FFFFFF;
+	z-index: 999;
+	border: 1px #DDDDDD solid;
+	box-shadow: 1px 1px 2px 2px #CCCCCC;
+	border-radius: 2px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.left_pane
+{
+	position: relative;
+	width: 31.8%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-right: 1px #DDDDDD solid;
+}
+.profile_container,.contacts_container
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 31.8%;
+	height: 100%;
+	border-right: 1px #DDDDDD solid;
+	background-color: #FFFFFF;
+	z-index: 998;
+	visibility: hidden;
+	-webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+}
+.contacts_container
+{
+	/*overflow: auto;*/
+}
+.contacts_container .contacts_header
+{
+	height: 16%;
+	background-color: #00BFA5;
+}
+.contacts_container .contacts_header h2
+{
+	color: #FFFFFF;
+	display: inline-block;
+	font-family: Geomanist,Lucida,sans-serif;
+	position: absolute;
+	top: 8%;
+}
+.contacts_container .contacts_header img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	position: relative;
+	top: 60%;
+	cursor: pointer;
+}
+.contacts_container .add_contacts
+{
+	display: block;
+	width: 100%;
+	height: 5%;
+	position: absolute;
+	top: 23%;
+}
+.contacts_container .add_contacts span
+{
+	position: relative;
+	top: 40%;
+	left: 2%;
+	font-size: 1em;
+}
+.contacts_container .add_contacts img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	float:left;
+}
+.contacts_container .contact_members
+{
+	position: absolute;
+	top: 28%;
+	width: 100%;
+	height: 92%;
+	overflow: auto;
+}
+.contacts_container .contact_members .members
+{
+	width: 100%;
+	height: 12%;
+	padding: 5%;
+	margin-bottom: 2%; 
+	font-family: Geomanist,Lucida,sans-serif;
+	font-size: 1em;
+}
+.contacts_container .contact_members .letter
+{
+	width: 100%;
+	height: 5%;
+	padding: 5%;
+	margin-bottom: 2%; 
+	font-family: Geomanist,Lucida,sans-serif;
+	font-size: 1.2em;
+	color: #009688;
+	font-weight: bold;
+}
+.contacts_container .contact_members img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 10%;
+}
+.contacts_container .contact_members .member_name
+{
+	vertical-align: top;
+	display: block;
+	position: relative;
+	top: -100%;
+	left: 20%;
+}
+.contacts_container .contact_members .member_status
+{
+	vertical-align: bottom;
+	font-size: 0.8em;
+	display: block;
+	position: relative;
+	top: -80%;
+	left: 20%;
+}
+.profile_container span
+{
+	display: block;
+	width: 100%;
+	height: 9%;
+	padding: 2%;
+	background-color: #EEEEEE;
+	vertical-align: top;
+	font-size: 2em;
+	font-family: Geomanist,Lucida,sans-serif;
+}
+.profile_container span img
+{
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}
+.profile_container .profile_photo img
+{
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	width: 50%;
+	height: 30%;
+	border-radius: 50%;
+	border: 1px #CCCCCC solid;
+}
+.profile_container .status
+{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	font-family: Geomanist;
+	padding: 5%;
+	width: 100%;
+}
+.self_info
+{
+	position: relative;
+	width: 100%;
+	height: 9%;
+	top: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	padding: 3%;
+	box-sizing: border-box;
+}
+.self_info .logout a 
+{
+	position: relative;
+	top: 30%;
+	float: right;
+	cursor: pointer;
+	margin-right: 2%;
+	font: sans-serif;
+	font-size: 0.8em;
+}
+.self_info .contacts img
+{
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0;
+	margin-left: 5%;
+}
+.self_info img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 5%;
+	border: 1px solid #BBBBBB;
+}
+.self_info span img
+{
+	width: 35px;
+	height: 35px;
+	float: right;
+	border-radius: 50%;
+	margin-right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.menu
+{
+	position: absolute;
+	top: 9%;
+	right: 5%;
+	width: 45%;
+	height: 20%;
+	background-color: #FFFFFF;
+	z-index: 999;
+	visibility: hidden;
+	border: 1px solid #CCCCCC;
+	box-shadow: 1px 1px 1px #CCCCCC;
+	border-radius: 3px;
+}
+.menu .menu_items
+{
+	width: 100%;
+	height: 33%;
+	text-align: left;
+	padding: 8%;
+	font-family: Geomanist,Lucida,sans-serif;
+}
+.menu .menu_items:hover
+{
+	background-color: #CCCCCC;
+}
+.search
+{
+	position: relative;
+	width: 100%;
+	height: 7%;
+	top: 0;
+	left: 0;
+	background-color: #FBFBFB;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.search .box
+{
+	position: relative;
+	width: 96%;
+	height: 90%;
+	margin: auto;
+	background-color: #FFFFFF;
+	border: 1px #EEEEEE solid;
+	border-radius: 3px;
+}
+.search input[type="text"]
+{
+	position: absolute;
+	top: 100%;
+	left: 5%;
+	width: 80%;
+	background-color: #FFFFFF;
+	outline: none;
+	border: none;
+	margin: auto;
+	font-size: 0.8em;
+	height: 150%;
+	box-sizing: border-box;
+	padding-left: 2%;
+}
+.search input[type="submit"]
+{
+	position: absolute;
+	left: 75%;
+	top: 100%;
+	width: 20%;
+	background-color: #CCCCCC;
+	border: 0;
+	outline: none;
+	border-radius: 2px;
+	font-size: 0.8em;
+	padding: 0;
+	visibility: hidden; /*change back*/
+}
+.search label img
+{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 90%;
+	cursor: pointer;
+}
+.form
+{
+	background-color: #FFFFFF;
+}
+.tabs
+{
+	position: relative;
+	width: 100%;
+	height: 5%;
+	background-color: #FDFDFD;
+	border-top: 1px #F2F2F2 solid;
+	font-family: sans-serif;
+	color: #979798;
+	font-weight: bold;
+}
+.tabs .tab_1
+{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	background-color: inherit;
+}
+.tabs .tab_2
+{
+	position: relative;
+	top: -100%;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	background-color: inherit;
+}
+.tabs .tab_1.selected, .tabs .tab_2.selected
+{
+	background-color: #F3F3F3;
+	border-bottom: 3px #009688 solid;
+}
+.tabs span
+{
+	position: relative;
+	top: 20%;
+	left: 30%;
+}
+.active_chats
+{
+	width: 100%;
+	height: 79%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.active_chats .conversation
+{
+	width: 100%;
+	height: 15%;
+	padding: 5%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #EEEEEE;
+	font-size: 1em;
+	font-family: sans-serif;
+}
+.active_chats .selected
+{
+	background-color: #DEE0E1;
+}
+.active_chats .user_search
+{
+	font-size: 1em;
+	color: #AAAAAA;
+	padding: 5%;
+}
+.active_chats .user_search a
+{
+	font-size: 1em;
+	color: #AAAAAA;
+	font-weight: lighter;
+}
+.active_chats .conversation span
+{
+	vertical-align: top;
+	font-size: 0.8em;
+	font-family: sans-serif;
+	color: #3C3C3C;
+}
+.active_chats .conversation img
+{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 5%;
+	border: 1px solid #BBBBBB;
+}
+.active_chats .conversation a
+{
+	font-weight: bold;
+	font-size: 0.9em;
+}
+.active_chats .group_search
+{
+	height: 20%;
+}
+.right_pane
+{
+	position: relative;
+	width: 68.2%;
+	height: 100%;
+	top: -100%;
+	left: 31.8%;
+}
+.user_info
+{
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 9%;
+	top: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	padding: 1%;
+	font-family: sans-serif;
+}
+.user_info .from_name
+{
+	position: relative;
+	top: 0%;
+	color: #666666;
+	/*font-weight: bold;*/
+	vertical-align: top;
+	font-size: 1.1em;
+}
+.user_info span img
+{
+	width: 35px;
+	height: 35px;
+	float: right;
+	border-radius: 50%;
+	margin-right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.user_info img
+{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 2%;
+	border: 1px solid #BBBBBB;
+}
+.user_info .members
+{
+	display: block;
+	font-size: 0.8em; 
+	position: relative;
+	left: 6%;
+	top: -40%;
+}
+.user_info .options
+{
+	position: absolute;
+	top: 15%;
+	right: 2%;
+}
+.menu2
+{
+	position: absolute;
+	top: 9%;
+	right: 0;
+	width: 40%;
+	height: 91%;
+	background-color: #F7F7F7;
+	z-index: 999;
+	visibility: hidden;
+}
+.menu2 .user_image
+{
+	position: relative;
+	top: 10%;
+	left:25%;
+	width: 100%;
+	height: 50%;
+	border: 1px #CCCCCC;
+}
+.menu2 .user_image span img,
+.menu2 .user_status span img,
+.menu2 .group_members_display span img
+{
+	width: 18px;
+	height: 18px;
+}
+.menu2 .user_status span
+{
+	position: absolute;
+	top: 10%;
+	right: 5%;
+}
+.menu2 .user_profile_pic
+{
+	width: 50%;
+	height: 50%;
+	border-radius: 50%;
+}
+.menu2 .user_status
+{
+	width: 80%;
+	height: 18%;
+	margin: auto;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding-top: 0;
+	padding: 5%;
+	font-family: Lucida,sans-serif;
+	position: relative;
+	top: -8%;
+}
+.menu2 .user_status h2,.menu2 .user_mail h2,.menu2 .group_members_display h2 
+{
+	position: relative;
+	top: -20%;
+	border-bottom: 1px #F7F7F7 solid;
+	font-family: Geomanist,Lucida,sans-serif;
+	font-size: 1.2em;
+}
+.menu2 .user_mail
+{
+	width: 80%;
+	height: 18%;
+	margin: auto;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding-top: 0;
+	padding: 5%;
+	font-family: Lucida,sans-serif;
+	margin-top: 2%;
+	position: relative;
+	top: -8%;
+}
+.menu2 .group_members_display
+{
+	width: 80%;
+	height: 18%;
+	overflow: auto;
+	margin: auto;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	padding-top: 0;
+	padding: 5%;
+	font-family: Lucida,sans-serif;
+	margin-top: 2%;
+	position: relative;
+	top: -8%;
+}
+.menu2 .group_members_display span
+{
+	position: absolute;
+	top: 10%;
+	right: 5%;
+}
+.messages
+{
+	position: relative;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 81%;
+	background-color: #E4DDD7; 
+	font-family: sans-serif;
+	font-size: 0.8em;
+	line-height: 0.8em;
+}
+.messages .placeholder_image
+{	
+
+}
+.messages .msg
+{
+	width: 51%;
+	min-height: 7%;
+	margin: 2%;
+	margin-bottom: 0.1%;
+	border-radius: 7px;
+	padding: 2%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	line-height: 0.8em;
+	font-family: sans-serif;
+	padding-bottom: 0;
+	font-size: 0.95em;
+}
+.messages .msg.from
+{
+	float: right;
+	background-color: #DCF8C6;
+	padding-top: 0.5%;
+}
+.messages .msg.to
+{
+	float: left;
+	background-color: #FFFFFF;
+}
+.messages .msg .time
+{
+	font-size: 0.8em;
+	float: right;
+}
+.messages .from_name
+{
+	color: #00DDFF;
+	font-weight: bold;
+}
+.messages a
+{
+	border-bottom: 10%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.send_message
+{
+	box-sizing: border-box;
+	position: relative;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 10%;
+	background-color: #F0EEEC;
+	padding: 2%;
+}
+.send_message input[type="text"]
+{
+	box-sizing: border-box;
+	position: relative;
+	top: -1%;
+	left: 5%;
+	width: 80%;
+	background-color: #FFFFFF;
+	outline: none;
+	border: none;
+	margin: auto;
+	font-size: 0.8em;
+	height: 10%;
+	padding: 1%;
+	padding-left: 5%;
+	border-radius: 5px;
+	color: #777777; 
+}
+.send_message input[type="submit"]
+{
+	position: relative;
+	left: 10%;
+	width: 35px; 
+	height: 35px; 
+	border-radius: 50%;
+	font-size: 0.8em;
+	padding: 0;
+	background-color: #009688;
+	outline: none;
+	border: 0;
+	visibility: hidden;
+}
+.send_message label img
+{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	left: 90%;
+	top: 30%;
+	cursor: pointer;
+}
+/*.send_message input[type="submit"]:hover
+{
+	content: "";
+	background-color: #00FFFF;
+}*/
+::-webkit-scrollbar
+{
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-track {
+      background-color: #FFFFFF;
+}
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #CBCBCB; 
+}
+ 
+::-webkit-scrollbar-button {
+      width: 0%;
+      height: 0%;
+} 
+ 
+::-webkit-scrollbar-corner {
+      width: 0%;
+      height: 0%;
+}
+a
+{
+	color: #333333;
+	font-family: sans-serif;
+	font-size: 1em;
+	vertical-align: top;
+	text-decoration: none;
+}
+.small_image
+{
+	width: 18px;
+	height: 18px;
+	float: right;
+}
+.exit_group
+{
+	background-color: red;
+	font-family: Geomanist,Lucida,sans-serif;
+	border-radius: 7px;
+	border: 0;
+	outline: 0;
+	padding: 2%;
+	cursor: pointer;
+	width: 25%;
+	height: 7%;
+	position: relative;
+	left: 38%;
+}
